@@ -4,11 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-a3',
   templateUrl: './a3.component.html',
   styleUrls: ['./a3.component.css'],
-  styles: [`
-        .white {
-            color: 'white';
-        }
-    `]
+  
 })
 export class A3Component implements OnInit {
 
