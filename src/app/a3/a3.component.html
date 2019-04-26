@@ -9,9 +9,9 @@
 <br />
 <br />
 <p
-  *ngFor="let click of clicks"
-  [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'white' }"
-  [ngClass]="{ white: click >= 5 }"
+  *ngFor="let click of clicks; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ white: i >= 5 }"
 >
-  {{ click }}
+  Click : {{ click }}
 </p>

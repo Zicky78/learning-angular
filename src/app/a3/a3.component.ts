@@ -19,7 +19,6 @@ export class A3Component implements OnInit {
     } else {
       this.display = false;
     }
-    this.click++;
-    this.clicks.push(this.click);
+    this.clicks.push(new Date());
   }
 }
