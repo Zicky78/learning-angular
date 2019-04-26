@@ -3,32 +3,23 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-a3',
   templateUrl: './a3.component.html',
-  styleUrls: ['./a3.component.css'],
-  
+  styleUrls: ['./a3.component.css']
 })
 export class A3Component implements OnInit {
-
   display = false;
-  clicks = ['Clicks: 0'];
+  clicks = [];
   click = 0;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   toggleDisplay() {
-    if(this.display === false) {
+    if (this.display === false) {
       this.display = true;
     } else {
       this.display = false;
     }
     this.click++;
-    this.clicks.push(`Clicks: ${this.click}`);
+    this.clicks.push(this.click);
   }
-
-  getBlue() {
-    return this.click > 5 ? 'blue' : 'white';
-  }
-
-  
 }

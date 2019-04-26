@@ -1,7 +1,17 @@
-<button class="btn btn-success" (click)="toggleDisplay()">Display Details</button>
-<br>
-<br>
-<p *ngIf="display">Secret Password = 'This is assignment 3 Jake. Stop lying to yourself'</p>
-<br>
-<br>
-<p *ngFor="let click of clicks" [ngStyle]="{backgroundColor: getBlue()}" [ngClass]="{white: click > 5}">{{clicks}}</p>
+<button class="btn btn-success" (click)="toggleDisplay()">
+  Display Details
+</button>
+<br />
+<br />
+<p *ngIf="display">
+  Secret Password = 'This is assignment 3 Jake. Stop lying to yourself'
+</p>
+<br />
+<br />
+<p
+  *ngFor="let click of clicks"
+  [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ white: click >= 5 }"
+>
+  {{ click }}
+</p>
